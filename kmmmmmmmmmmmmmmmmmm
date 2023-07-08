@@ -197,7 +197,7 @@ LaunchProVersion.TextWrapped = true
 UICorner_4.Parent = LaunchProVersion
 
 local function FURPK_fake_script() -- DownloadData.DataScript 
-	local script = Instance.new('LocalScript', DownloadData)
+	local script = Instance.new('加载中', DownloadData)
 	_G.ProBaconHubLoadDataDone = false
 	local Head = "加载: "
 	task.wait(0.5)
@@ -263,13 +263,13 @@ local function FURPK_fake_script() -- DownloadData.DataScript
 end
 coroutine.wrap(FURPK_fake_script)()
 local function RKSV_fake_script() -- Launch.LaunchScript 
-	local script = Instance.new('LocalScript', Launch)
+	local script = Instance.new('加载中', Launch)
 	_G.Launched = false
 	local function LeftClickOnLaunch()
 		if _G.ProBaconHubLoadDataDone and not _G.Launched then
 			game.Players.LocalPlayer.PlayerGui.ProBaconHub.GuiLoader.Visible = false
 			_G.Launched = true
-			game.StarterGui:SetCore("SendNotification", {Title="Black Cat"; Text="Loading...";Duration=5;})
+			game.StarterGui:SetCore("欢迎使用...", {Title="黑猫"; Text="请稍等...";Duration=5;})
 			_G.IsItExecutedByLoader = true
 			loadstring(game:GetObjects("rbxassetid://13960288440")[1].Source)()
 			game.Players.LocalPlayer.PlayerGui.ProBaconHub:Destroy()
