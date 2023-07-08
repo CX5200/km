@@ -197,7 +197,7 @@ LaunchProVersion.TextWrapped = true
 UICorner_4.Parent = LaunchProVersion
 
 local function FURPK_fake_script() -- DownloadData.DataScript 
-	local script = Instance.new('加载中', DownloadData)
+	local script = Instance.new('LocalScript', DownloadData)
 	_G.ProBaconHubLoadDataDone = false
 	local Head = "加载: "
 	task.wait(0.5)
